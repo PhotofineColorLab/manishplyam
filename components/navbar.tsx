@@ -44,10 +44,10 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-24 items-center">
-        <div className="flex items-center mr-auto pl-0">
+      <div className="container flex h-24 items-center px-4">
+        <div className="flex items-center mr-auto">
           <Link href="/" className="flex items-center">
-            <div className="relative h-24 w-96">
+            <div className="relative h-16 sm:h-20 md:h-24 w-52 sm:w-72 md:w-96">
               <Image
                 src={IMAGES.logo || "/placeholder.svg"}
                 alt="Manish Plyam Studio Logo"
@@ -76,26 +76,28 @@ export function Navbar() {
           </Link>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="outline" size="icon">
-                <Menu className="h-5 w-5" />
+              <Button variant="outline" size="icon" className="ml-auto">
+                <Menu className="h-6 w-6 text-[#8B5A2B]" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <div className="flex flex-col gap-6 pt-10">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-6">
+              <div className="flex flex-col gap-6 pt-6">
                 {navItems.map((item, index) => (
                   <Link
                     key={index}
                     href={item.href}
-                    className="text-xl font-medium transition-colors hover:text-[#8B5A2B]"
+                    className="text-xl font-medium transition-colors hover:text-[#8B5A2B] px-2 py-1 border-b border-gray-100"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full bg-[#8B5A2B] hover:bg-[#704626]">Get a Quote</Button>
-                </Link>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <Link href="/contact" onClick={() => setIsOpen(false)}>
+                    <Button className="w-full bg-[#8B5A2B] hover:bg-[#704626]">Get a Quote</Button>
+                  </Link>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

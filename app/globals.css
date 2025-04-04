@@ -238,5 +238,21 @@
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+  
+  /* Fix padding and alignment on mobile */
+  section {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Ensure content is centered on mobile */
+  .flex-col {
+    align-items: center !important;
+  }
+  
+  /* Ensure proper spacing between elements */
+  .space-y-4 > * + * {
+    margin-top: 1rem !important;
+  }
 }
 

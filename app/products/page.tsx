@@ -119,28 +119,28 @@ export default function ProductsPage() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section ref={sectionRefs.hero} className="w-full py-12 md:py-24 lg:py-32 bg-[#f8f5f0] overflow-hidden">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className={`space-y-2 ${visibleSections.hero ? "animate-slide-in-left" : "opacity-0"}`}>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Product Range</h1>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl">
+              <p className="max-w-[900px] text-muted-foreground md:text-xl px-2">
                 Explore our comprehensive range of premium plywood solutions for all your needs.
               </p>
             </div>
             <div
-              className={`flex flex-col sm:flex-row gap-4 mt-6 ${visibleSections.hero ? "animate-fade-in delay-400" : "opacity-0"}`}
+              className={`flex flex-col sm:flex-row gap-4 mt-6 w-full justify-center px-4 ${visibleSections.hero ? "animate-fade-in delay-400" : "opacity-0"}`}
             >
-              <Link href="/brands">
-                <Button size="lg" className="bg-[#8B5A2B] hover:bg-[#704626] group">
+              <Link href="/brands" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-[#8B5A2B] hover:bg-[#704626] group">
                   View Our Brands
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 border-[#8B5A2B] text-[#8B5A2B] hover:bg-[#8B5A2B]/10"
+                  className="w-full sm:w-auto bg-white/10 border-[#8B5A2B] text-[#8B5A2B] hover:bg-[#8B5A2B]/10"
                 >
                   Contact Us
                 </Button>
@@ -152,11 +152,11 @@ export default function ProductsPage() {
 
       {/* Regular Products Grid */}
       <section ref={sectionRefs.products} className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className={`space-y-2 ${visibleSections.products ? "animate-slide-in-left" : "opacity-0 max-sm:opacity-100"}`}>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Products</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl">
+              <p className="max-w-[900px] text-muted-foreground md:text-xl px-2">
                 Explore our comprehensive range of premium plywood solutions for all your needs.
               </p>
             </div>
@@ -217,10 +217,10 @@ export default function ProductsPage() {
 
       {/* Custom Solutions */}
       <section ref={sectionRefs.custom} className="w-full py-12 md:py-24 lg:py-32 bg-[#f8f5f0]">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
+              <div className="space-y-2 px-2">
                 <h2
                   className={`text-3xl font-bold tracking-tighter sm:text-4xl ${visibleSections.custom ? "animate-slide-in-left" : "opacity-0"}`}
                 >
@@ -238,9 +238,9 @@ export default function ProductsPage() {
                   Whether you need special dimensions, unique finishes, or specific performance characteristics, our
                   team can create the perfect plywood solution for your project.
                 </p>
-                <div className={`pt-4 ${visibleSections.custom ? "animate-fade-in delay-600" : "opacity-0"}`}>
+                <div className={`pt-4 flex justify-center sm:justify-start ${visibleSections.custom ? "animate-fade-in delay-600" : "opacity-0"}`}>
                   <Link href="/contact">
-                    <Button size="lg" className="bg-[#8B5A2B] hover:bg-[#704626] group">
+                    <Button size="lg" className="w-full sm:w-auto bg-[#8B5A2B] hover:bg-[#704626] group">
                       Contact Us for Custom Orders
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
