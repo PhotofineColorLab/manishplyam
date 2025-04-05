@@ -97,7 +97,7 @@ export default function BrandsPage() {
             className="w-full max-w-6xl mx-auto"
           >
             <TabsList
-              className={`grid w-full grid-cols-3 mb-12 ${visibleSections.brands ? "animate-fade-in delay-200" : "opacity-0"}`}
+              className={`grid w-full grid-cols-4 mb-12 ${visibleSections.brands ? "animate-fade-in delay-200" : "opacity-0"}`}
             >
               {IMAGES.ownBrands.map((brand, index) => (
                 <TabsTrigger
@@ -190,7 +190,9 @@ export default function BrandsPage() {
                     <div className="text-center text-white px-4">
                       <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Explore {brand.name} Collection</h3>
                       <Button className="bg-white text-[#8B5A2B] hover:bg-white/90 w-full sm:w-auto">
-                        View Catalog
+                      <a href="/products">
+                      View Catalog
+                      </a>
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     </div>

@@ -113,6 +113,42 @@ export default function ProductsPage() {
       dimensions: "8ft x 4ft",
       image: IMAGES.products.flexiblePlywood,
     },
+    {
+      id: 7,
+      name: "Fire Resistant Plywood",
+      description:
+        "Safety-focused plywood with fire-retardant properties. Essential for spaces where fire safety standards are critical.",
+      thickness: "15mm",
+      dimensions: "8ft x 4ft",
+      image: IMAGES.products.fireResistantPlywood,
+    },
+    {
+      id: 8,
+      name: "Shuttering Plywood",
+      description:
+        "High-strength plywood designed for concrete formwork and construction applications. Delivers excellent load-bearing capacity.",
+      thickness: "18mm",
+      dimensions: "8ft x 4ft",
+      image: IMAGES.products.shutteringPlywood,
+    },
+    {
+      id: 9,
+      name: "Bamboo Plywood",
+      description:
+        "Eco-friendly plywood made from sustainable bamboo. Offers a unique aesthetic along with excellent durability and sustainability.",
+      thickness: "12mm",
+      dimensions: "8ft x 4ft",
+      image: IMAGES.products.bambooPly,
+    },
+    {
+      id: 10,
+      name: "Acrylic Plywood",
+      description:
+        "Specialty plywood with acrylic finish for a modern, sleek appearance. Perfect for contemporary interior design projects.",
+      thickness: "16mm",
+      dimensions: "8ft x 4ft",
+      image: IMAGES.products.acrylicPly,
+    },
   ]
 
   return (
@@ -202,15 +238,6 @@ export default function ProductsPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div
-            className={`flex justify-center mt-12 ${visibleSections.products ? "animate-fade-in delay-600" : "opacity-0 max-sm:opacity-100"}`}
-          >
-            <Button size="lg" className="bg-[#8B5A2B] hover:bg-[#704626]">
-              View All Products
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
           </div>
         </div>
       </section>

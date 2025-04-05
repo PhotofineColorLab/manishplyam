@@ -87,11 +87,11 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 flex-shrink-0 text-gray-400" />
-                <span>123 Plywood Avenue, Industrial Area, New Delhi, 110001, India</span>
+                <span>5,6 Gurukrupa Business Center, Near Mahaveer Chowk, Nanded - Maharashtra, India 431601</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 flex-shrink-0 text-gray-400" />
-                <span>+91 98765 43210</span>
+                <span>+91 9404900094</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0 text-gray-400" />

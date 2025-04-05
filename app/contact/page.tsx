@@ -25,7 +25,7 @@ export default function ContactPage() {
     {
       id: "branch2",
       name: "Nanded Branch",
-      address: "5,6 Gurukrupa Business Center, Near Mahaveer Chowk, Nanded- 431601, nanded, Maharashtra, India, 431601",
+      address: "5,6 Gurukrupa Business Center, Near Mahaveer Chowk, Nanded - Maharashtra, India 431601",
       phone: "+91 9404900094",
       email: "nirajrathi7@gmail.com",
       map: IMAGES.contact.branches.mumbai,
@@ -33,7 +33,7 @@ export default function ContactPage() {
     {
       id: "branch3",
       name: "Jalna Branch",
-      address: "S.P. Heights, Beside Axis Bank, Old Mondha Road, Jalna- 431203, jalna, Maharashtra, India, 431203",
+      address: "S.P. Heights, Beside Axis Bank, Old Mondha Road, Jalna- 431203",
       phone: "+91 7798900094",
       email: "nirajrathi7@gmail.com",
       map: IMAGES.contact.branches.bangalore,
@@ -42,7 +42,7 @@ export default function ContactPage() {
       id: "branch4",
       name: "Parbhani Branch",
       address:
-        "Meenatai Thakare Road, New Mondha Road, Parbhani- 431401, Meenatai Thakare Road, New Mondha Road, Parbhani- 431401, Parbhani, Maharashtra, India, 431401",
+        "Meenatai Thakare Road, New Mondha Road, Parbhani- 431401",
       phone: "+91 8055900094",
       email: "nirajrathi7@gmail.com",
       map: IMAGES.contact.branches.kolkata,
@@ -114,79 +114,84 @@ export default function ContactPage() {
               </div>
 
               <Tabs defaultValue="branch1" value={activeTab} onValueChange={setActiveTab} className="w-full">
-                <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-6">
+                <TabsList className="flex flex-wrap gap-2 mb-6">
                   {branches.map((branch) => (
-                    <TabsTrigger key={branch.id} value={branch.id} className="text-xs md:text-sm">
+                    <TabsTrigger 
+                      key={branch.id} 
+                      value={branch.id} 
+                      className="flex-1 min-w-[80px] text-xs sm:text-sm py-3 px-2 sm:px-4"
+                    >
                       {branch.name.split(" ")[0]}
                     </TabsTrigger>
                   ))}
                 </TabsList>
 
                 {branches.map((branch) => (
-                  <TabsContent key={branch.id} value={branch.id} className="space-y-6">
+                  <TabsContent key={branch.id} value={branch.id} className="space-y-6 p-2 sm:p-4">
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold">{branch.name}</h3>
 
-                      <div className="flex items-start space-x-4">
-                        <MapPin className="h-6 w-6 text-[#8B5A2B] mt-1 flex-shrink-0" />
+                      <div className="flex items-start space-x-3">
+                        <MapPin className="h-5 w-5 text-[#8B5A2B] mt-1 flex-shrink-0" />
                         <div>
                           <h4 className="font-medium">Address</h4>
-                          <p className="text-muted-foreground">{branch.address}</p>
+                          <p className="text-muted-foreground text-sm sm:text-base">{branch.address}</p>
                         </div>
                       </div>
 
-                      <div className="flex items-start space-x-4">
-                        <Phone className="h-6 w-6 text-[#8B5A2B] mt-1 flex-shrink-0" />
+                      <div className="flex items-start space-x-3">
+                        <Phone className="h-5 w-5 text-[#8B5A2B] mt-1 flex-shrink-0" />
                         <div>
                           <h4 className="font-medium">Phone</h4>
-                          <p className="text-muted-foreground">{branch.phone}</p>
+                          <p className="text-muted-foreground text-sm sm:text-base">{branch.phone}</p>
                         </div>
                       </div>
 
-                      <div className="flex items-start space-x-4">
-                        <Mail className="h-6 w-6 text-[#8B5A2B] mt-1 flex-shrink-0" />
+                      <div className="flex items-start space-x-3">
+                        <Mail className="h-5 w-5 text-[#8B5A2B] mt-1 flex-shrink-0" />
                         <div>
                           <h4 className="font-medium">Email</h4>
-                          <p className="text-muted-foreground">{branch.email}</p>
+                          <p className="text-muted-foreground text-sm sm:text-base">{branch.email}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="rounded-xl overflow-hidden h-[300px] relative">
+                    <div className="rounded-lg overflow-hidden h-[250px] sm:h-[300px] relative mt-6">
                       <iframe
                         src={branch.map || "/placeholder.svg"}
-                        width="600"
-                        height="300"
+                        width="100%"
+                        height="100%"
                         style={{ border: 0 }}
                         allowFullScreen
+                        loading="lazy"
                         title={`${branch.name} location map`}
-                        className="object-cover w-full h-full"
+                        className="absolute inset-0"
                       ></iframe>
                     </div>
                   </TabsContent>
                 ))}
               </Tabs>
 
-              <div>
-                <h3 className="font-medium">Business Hours</h3>
-                <div className="grid grid-cols-2 gap-2 mt-2">
+              <div className="mt-8 p-4 bg-[#f8f5f0] rounded-lg">
+                <h3 className="font-medium text-lg mb-3">Business Hours</h3>
+                <div className="grid grid-cols-2 gap-2">
                   <div>
-                    <p className="text-muted-foreground">Monday - Friday:</p>
+                    <p className="text-muted-foreground text-sm sm:text-base">Monday - Friday:</p>
                   </div>
                   <div>
-                    <p className="text-muted-foreground">9:00 AM - 6:00 PM</p>
+                    <p className="text-muted-foreground text-sm sm:text-base font-medium">9:00 AM - 6:00 PM</p>
                   </div>
                   <div>
-                    <p className="text-muted-foreground">Saturday:</p>
+                    <p className="text-muted-foreground text-sm sm:text-base">Saturday:</p>
                   </div>
                   <div>
-                    <p className="text-muted-foreground">10:00 AM - 4:00 PM</p>
+                    <p className="text-muted-foreground text-sm sm:text-base font-medium">10:00 AM - 4:00 PM</p>
                   </div>
                   <div>
-                    <p className="text-muted-foreground">Sunday:</p>
+                    <p className="text-muted-foreground text-sm sm:text-base">Sunday:</p>
                   </div>
                   <div>
-                    <p className="text-muted-foreground">Closed</p>
+                    <p className="text-muted-foreground text-sm sm:text-base font-medium">Closed</p>
                   </div>
                 </div>
               </div>
