@@ -6,8 +6,8 @@ export const IMAGES = {
   // Hero carousel images
   heroCarousel: [
     "https://www.centuryply.com/uploads/2_D_a824a29a21.jpg",
-    "https://wigwamply.com/wp-content/uploads/2024/06/dining-room-with-wooden-furniture.jpg",
-    "https://images.pexels.com/photos/11427524/pexels-photo-11427524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.pexels.com/photos/276651/pexels-photo-276651.jpeg?auto=compress&cs=tinysrgb&w=600",
     "https://images.pexels.com/photos/8817836/pexels-photo-8817836.jpeg?auto=compress&cs=tinysrgb&w=600",
   ],
 
@@ -92,25 +92,27 @@ export const IMAGES = {
         },
       ],
     },
-    {
-      name: "Timex",
-      logo: "https://www.timexplywoodanddoors.com/wp-content/uploads/2023/03/timex-plywood-logo-new.jpg",
-      description: "Timeless designs with a focus on durability and classic aesthetics for lasting interiors.",
-      bannerImage: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070",
-      products: [
-        {
-          name: "Timex Veneer",
-          image: "https://www.timexveneer.com/wp-content/uploads/2024/07/louvers-series-p3.png",
-          description: "Premium veneer sheets with rich textures and natural grain patterns for elegant furniture finishing.",
-        },
-        {
-          name: "Timex Plywood",
-          image: "https://www.timexplywoodanddoors.com/wp-content/uploads/2023/03/prime-plus.jpg",
-          description: "High-quality, long-lasting plywood for furniture that stands the test of time.",
-        }
-      ],
-    },
   ],
+
+  // Timex Brand details
+  TIMEX_BRAND: {
+    name: "Timex",
+    logo: "https://www.timexplywoodanddoors.com/wp-content/uploads/2023/03/timex-plywood-logo-new.jpg",
+    description: "Timeless designs with a focus on durability and classic aesthetics for lasting interiors.",
+    bannerImage: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070",
+    products: [
+      {
+        name: "Timex Veneer",
+        image: "https://www.timexveneer.com/wp-content/uploads/2024/07/louvers-series-p3.png",
+        description: "Premium veneer sheets with rich textures and natural grain patterns for elegant furniture finishing.",
+      },
+      {
+        name: "Timex Plywood",
+        image: "https://www.timexplywoodanddoors.com/wp-content/uploads/2023/03/prime-plus.jpg",
+        description: "High-quality, long-lasting plywood for furniture that stands the test of time.",
+      }
+    ],
+  },
 
   // Why Choose Us icons
   whyChooseUs: [

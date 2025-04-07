@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Star } from "lucide-react"
@@ -5,48 +7,37 @@ import { ArrowRight, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BrandSlider } from "@/components/brand-slider"
+import { HeroCarousel } from "@/components/hero-carousel"
 import { IMAGES } from "@/lib/constants"
 
 export default function Home() {
+  // Hero content for each slide
+  const heroContent = [
+    {
+      heading: "Premium Plywood Solutions",
+      description: "Crafting excellence in plywood since 1995. Quality materials, expert craftsmanship, and customer satisfaction guaranteed.",
+      image: IMAGES.heroCarousel[0]
+    },
+    {
+      heading: "Elevate Your Home & Business",
+      description: "Transform your spaces with our durable, elegant plywood products designed for lasting performance.",
+      image: IMAGES.heroCarousel[1]
+    },
+    {
+      heading: "Sustainable Wood Products",
+      description: "Environmentally conscious materials with the perfect balance of beauty, strength, and durability.",
+      image: IMAGES.heroCarousel[2]
+    }
+  ]
+
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Static Image */}
-      <section className="relative w-full h-[600px] md:h-[700px]">
-        <div className="absolute inset-0">
-          <Image
-            src={IMAGES.heroCarousel[0] || "/placeholder.svg"}
-            alt="Premium plywood products"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        <div className="relative container h-full flex flex-col justify-center items-start px-4 md:px-6">
-          <div className="max-w-2xl space-y-6">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white animate-slide-in-left">
-              Premium Plywood Solutions for Your Home & Business
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 animate-slide-in-left delay-200">
-              Crafting excellence in plywood since 1995. Quality materials, expert craftsmanship, and customer
-              satisfaction guaranteed.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-400">
-              <Link href="/products">
-                <Button size="lg" className="bg-[#8B5A2B] hover:bg-[#704626]">
-                  Explore Products
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="bg-white/10 text-white border-white hover:bg-white/20">
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section with Carousel */}
+      <HeroCarousel 
+        images={heroContent.map(item => item.image)} 
+        headings={heroContent.map(item => item.heading)}
+        descriptions={heroContent.map(item => item.description)}
+      />
 
       {/* Brands We've Worked With */}
       <section className="w-full py-12 md:py-16 lg:py-20 border-t">

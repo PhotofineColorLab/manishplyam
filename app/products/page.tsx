@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -13,12 +13,14 @@ export default function ProductsPage() {
   const [visibleSections, setVisibleSections] = useState<{ [key: string]: boolean }>({
     hero: false,
     products: false,
+    timex: false,
     custom: false,
   })
 
   const sectionRefs = {
     hero: useRef<HTMLDivElement>(null),
     products: useRef<HTMLDivElement>(null),
+    timex: useRef<HTMLDivElement>(null),
     custom: useRef<HTMLDivElement>(null),
   }
 
@@ -30,6 +32,7 @@ export default function ProductsPage() {
       setVisibleSections({
         hero: true,
         products: true,
+        timex: true,
         custom: true,
       });
     }, 2000); // 2 seconds fallback
@@ -242,8 +245,92 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* Timex Brand Section */}
+      <section ref={sectionRefs.timex} className="w-full py-12 md:py-24 lg:py-32 bg-[#f8f5f0]">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <div className={`space-y-2 ${visibleSections.timex ? "animate-slide-in-left" : "opacity-0"}`}>
+              <span className="inline-block px-4 py-1 rounded-full bg-[#8B5A2B]/10 text-[#8B5A2B] text-sm font-medium">
+                Featured Brand
+              </span>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{IMAGES.TIMEX_BRAND.name}</h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl px-2">
+                {IMAGES.TIMEX_BRAND.description}
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center mt-8">
+            {/* Brand image and logo */}
+            <div className={`relative overflow-hidden rounded-xl ${visibleSections.timex ? "animate-scale-up" : "opacity-0"}`}>
+              <div className="aspect-square relative">
+                <Image
+                  src={IMAGES.TIMEX_BRAND.bannerImage}
+                  alt={IMAGES.TIMEX_BRAND.name}
+                  fill
+                  className="object-cover rounded-xl"
+                />
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white/90 p-4 rounded-xl">
+                    <Image
+                      src={IMAGES.TIMEX_BRAND.logo}
+                      alt={`${IMAGES.TIMEX_BRAND.name} logo`}
+                      width={200}
+                      height={80}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Products grid */}
+            <div className={`space-y-6 ${visibleSections.timex ? "animate-fade-in delay-300" : "opacity-0"}`}>
+              <h3 className="text-2xl font-bold">Timex Product Range</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {IMAGES.TIMEX_BRAND.products.map((product, index) => (
+                  <Card
+                    key={product.name}
+                    className="overflow-hidden h-full flex flex-col group hover:shadow-xl transition-all duration-300"
+                    style={{ animationDelay: `${300 + index * 100}ms` }}
+                  >
+                    <div className="aspect-square relative overflow-hidden">
+                      <Image
+                        src={product.image}
+                        width={300}
+                        height={300}
+                        alt={product.name}
+                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <CardContent className="p-4 flex flex-col flex-grow">
+                      <h4 className="text-lg font-bold group-hover:text-[#8B5A2B] transition-colors">{product.name}</h4>
+                      <p className="text-sm text-muted-foreground mt-2 flex-grow">{product.description}</p>
+                      <div className="mt-4 text-sm">
+                        <Link href="/contact" className="flex items-center text-[#8B5A2B] font-medium group">
+                          <span>Get a Quote</span>
+                          <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              <div className="flex justify-center mt-8">
+                <Link href="/contact">
+                  <Button size="lg" className="bg-[#8B5A2B] hover:bg-[#704626] group">
+                    Enquire About Timex Products
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Custom Solutions */}
-      <section ref={sectionRefs.custom} className="w-full py-12 md:py-24 lg:py-32 bg-[#f8f5f0]">
+      <section ref={sectionRefs.custom} className="w-full py-12 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">

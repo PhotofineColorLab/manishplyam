@@ -97,7 +97,7 @@ export default function BrandsPage() {
             className="w-full max-w-6xl mx-auto"
           >
             <TabsList
-              className={`grid w-full grid-cols-4 mb-12 ${visibleSections.brands ? "animate-fade-in delay-200" : "opacity-0"}`}
+              className={`grid w-full grid-cols-3 mb-12 ${visibleSections.brands ? "animate-fade-in delay-200" : "opacity-0"}`}
             >
               {IMAGES.ownBrands.map((brand, index) => (
                 <TabsTrigger
