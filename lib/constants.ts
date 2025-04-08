@@ -176,9 +176,8 @@ export const IMAGES = {
   about: {
     workshop: "https://www.centuryply.com/uploads/Legacy_Gif_2ddee2d0e0.gif",
     leadership: [
-      "https://randomuser.me/api/portraits/men/32.jpg",
-      "https://randomuser.me/api/portraits/women/44.jpg",
-      "https://randomuser.me/api/portraits/men/55.jpg",
+      "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
   },
 

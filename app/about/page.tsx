@@ -29,7 +29,7 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl animate-slide-in-left">Our Story</h2>
                 <p className="text-muted-foreground md:text-lg animate-slide-in-left delay-200">
-                  Founded in 1995 by Manish Agarwal, Manish Plyam Studio began as a small workshop with a big vision: to
+                  Founded in 1995 by Manish Loya, Manish Plyam Studio began as a small workshop with a big vision: to
                   provide the highest quality plywood products to customers across India.
                 </p>
                 <p className="text-muted-foreground md:text-lg animate-slide-in-left delay-400">
@@ -70,26 +70,20 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-10 md:grid-cols-3">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-10 md:grid-cols-2">
             {[
               {
-                name: "Manish Agarwal",
+                name: "Manish Loya",
                 role: "Founder & CEO",
-                bio: "With over 30 years of experience in the plywood industry, Manish leads our company with vision and expertise.",
+                bio: "Manish brings his design expertise to ensure our products meet the highest aesthetic standards.",
                 image: IMAGES.about.leadership[0],
               },
               {
-                name: "Priya Agarwal",
+                name: "Mayur Loya",
                 role: "Creative Director",
-                bio: "Priya brings her design expertise to ensure our products meet the highest aesthetic standards.",
+                bio: "Mayur brings his financial expertise to ensure our company runs smoothly and efficiently.",
                 image: IMAGES.about.leadership[1],
-              },
-              {
-                name: "Rajiv Sharma",
-                role: "Head of Operations",
-                bio: "Rajiv oversees our manufacturing processes, ensuring efficiency and quality at every step.",
-                image: IMAGES.about.leadership[2],
-              },
+              }
             ].map((leader, i) => (
               <div key={i} className="flex flex-col items-center space-y-4">
                 <div className="h-40 w-40 overflow-hidden rounded-full bg-gray-200">
