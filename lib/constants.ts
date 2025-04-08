@@ -160,16 +160,16 @@ export const IMAGES = {
 
   // Product images
   products: {
-    marinePlywood: "https://wigwamply.com/wp-content/uploads/2024/10/Fire-R.jpg",
-    veneerPlywood: "https://wigwamply.com/wp-content/uploads/2024/10/MR-Grade.jpg",
-    mdfBoard: "https://wigwamply.com/wp-content/uploads/2024/10/Marine-Grade.jpg",
-    blockboard: "https://wigwamply.com/wp-content/uploads/2024/10/Flush-door.jpg",
-    particleBoard: "https://wigwamply.com/wp-content/uploads/2024/08/product-Image-copy-4.jpg",
-    flexiblePlywood: "https://wigwamply.com/wp-content/uploads/2024/10/BLock-board.jpg",
-    fireResistantPlywood: "https://wigwamply.com/wp-content/uploads/2024/10/Flexible.jpg",
-    shutteringPlywood: "https://wigwamply.com/wp-content/uploads/2024/10/Structual.jpg",
-    bambooPly: "https://wigwamply.com/wp-content/uploads/2024/10/Fire-R.jpg",
-    acrylicPly: "https://wigwamply.com/wp-content/uploads/2024/10/Flush-door.jpg",
+    marinePlywood: "https://www.centuryply.com/uploads/Club_Prime_Plywood_72_mm_120923_f1c037ed51.jpg",
+    veneerPlywood: "https://images.jdmagicbox.com/quickquotes/images_main/teak-veneer-plywood-375419440-9ca2r.jpg",
+    mdfBoard: "https://cpimg.tistatic.com/05682320/b/4/Laminated-MDF-Board-Sonoma-Oak-Dark.jpeg",
+    blockboard: "https://materialdepot-images-hbh2cjbvbtfmanhx.z02.azurefd.net/V000255/ecotec-platinum-710-blockboard-greenply-plywood/ecotec-platinum-710-blockboard-19-ivory-customizedxcustomized/1.jpg?width=400",
+    particleBoard: "https://mccoymart.com/buy_catalog/image/catalog/products/2023/11/NaturalTeak.webp",
+    flexiblePlywood: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSffKNyWz-YcR9eL0VAg_qoF0rPHCBYPrEZLA&s",
+    fireResistantPlywood: "https://images.thdstatic.com/productImages/8e4b0161-fbee-444c-ba4a-4644b1998568/svn/sheathing-plywood-309961-64_1000.jpg",
+    shutteringPlywood: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfkozl8NjUWKGrlb1zmPLMiQILNGwsXwFpQg&s",
+    bambooPly: "https://tiimg.tistatic.com/fp/1/007/632/sustainable-and-eco-friendly-brown-bamboo-plywood-sheet-for-flooring-cabinets-furniture-and-architectural-details-806.jpg",
+    acrylicPly: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-YXysezl4e0ZGBCDfWuw_3Vg1cZK9v96bcQ&s",
   },
 
   // About page images
