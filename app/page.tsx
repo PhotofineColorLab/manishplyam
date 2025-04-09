@@ -45,15 +45,42 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl animate-slide-in-left">
-                Trusted By Leading Brands
+                Our Premium Brands
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl animate-slide-in-left delay-200">
-                We've partnered with some of the most respected names in construction and interior design.
+                Premium Brands Owned By Manish Plyam Studio
               </p>
             </div>
           </div>
-          <div className="mx-auto max-w-7xl py-10">
-            <BrandSlider brands={IMAGES.brands} />
+          <div className="mx-auto max-w-5xl py-10 overflow-hidden">
+            <div className="w-full relative">
+              <div className="brand-slider">
+                {/* First set of logos */}
+                {IMAGES.brands.map((brand, index) => (
+                  <div key={`first-${index}`} className="w-[180px] mx-8 flex-shrink-0">
+                    <Image
+                      src={brand || "/placeholder.svg"}
+                      width={180}
+                      height={80}
+                      alt={`Brand logo ${index + 1}`}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+                {/* Second set of logos (for continuous effect) */}
+                {IMAGES.brands.map((brand, index) => (
+                  <div key={`second-${index}`} className="w-[180px] mx-8 flex-shrink-0">
+                    <Image
+                      src={brand || "/placeholder.svg"}
+                      width={180}
+                      height={80}
+                      alt={`Brand logo ${index + 1}`}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

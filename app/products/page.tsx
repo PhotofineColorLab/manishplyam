@@ -136,21 +136,39 @@ export default function ProductsPage() {
     },
     {
       id: 9,
-      name: "Bamboo Plywood",
+      name: "High Quality Particle Board",
       description:
-        "Eco-friendly plywood made from sustainable bamboo. Offers a unique aesthetic along with excellent durability and sustainability.",
-      thickness: "12mm",
+        "Engineered wood product manufactured from wood chips, sawmill shavings, and sawdust. Ideal for furniture, cabinets, and shelving.",
+      thickness: "16mm",
       dimensions: "8ft x 4ft",
-      image: IMAGES.products.bambooPly,
+      image: IMAGES.products.particleBoard,
     },
     {
       id: 10,
-      name: "Acrylic Plywood",
+      name: "HDHMR Board",
       description:
-        "Specialty plywood with acrylic finish for a modern, sleek appearance. Perfect for contemporary interior design projects.",
-      thickness: "16mm",
+        "High-Density High Moisture Resistant board with superior screw-holding capacity and moisture resistance. Perfect for kitchens and bathrooms.",
+      thickness: "17mm",
       dimensions: "8ft x 4ft",
-      image: IMAGES.products.acrylicPly,
+      image: IMAGES.products.hdhmrBoard,
+    },
+    {
+      id: 11,
+      name: "ABRAZE Board",
+      description:
+        "Premium multi-layered board with excellent durability and abrasion resistance. Ideal for high-traffic commercial spaces and retail fixtures.",
+      thickness: "18mm",
+      dimensions: "8ft x 4ft",
+      image: IMAGES.products.abrazeBoard,
+    },
+    {
+      id: 12,
+      name: "Embossed-HDF Board",
+      description:
+        "High-Density Fiberboard with decorative embossed patterns. Perfect for wall panels, furniture components, and decorative interiors.",
+      thickness: "12mm",
+      dimensions: "8ft x 4ft",
+      image: IMAGES.products.embossedHdfBoard,
     },
   ]
 
@@ -184,6 +202,52 @@ export default function ProductsPage() {
                   Contact Us
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Brands Slider */}
+      <section className="w-full py-8 md:py-12 bg-white border-t border-b">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-6">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl animate-slide-in-left">
+                Our Partner Brands
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-lg animate-slide-in-left delay-200">
+                We collaborate with the best in the industry to offer you premium quality products
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto max-w-7xl py-6 overflow-hidden">
+            <div className="w-full relative">
+              <div className="brand-slider">
+                {/* First set of logos */}
+                {IMAGES.partnerBrands.map((brand, index) => (
+                  <div key={`first-${index}`} className="w-[180px] mx-8 flex-shrink-0">
+                    <Image
+                      src={brand || "/placeholder.svg"}
+                      width={180}
+                      height={80}
+                      alt={`Brand logo ${index + 1}`}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+                {/* Second set of logos (for continuous effect) */}
+                {IMAGES.partnerBrands.map((brand, index) => (
+                  <div key={`second-${index}`} className="w-[180px] mx-8 flex-shrink-0">
+                    <Image
+                      src={brand || "/placeholder.svg"}
+                      width={180}
+                      height={80}
+                      alt={`Brand logo ${index + 1}`}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

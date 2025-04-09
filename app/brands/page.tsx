@@ -175,27 +175,51 @@ export default function BrandsPage() {
                   </div>
                 </div>
 
-                {/* Banner Image */}
-                <div
-                  className="mt-12 sm:mt-16 relative h-64 sm:h-80 rounded-xl overflow-hidden animate-fade-in"
-                  style={{ animationDelay: "600ms" }}
-                >
-                  <Image
-                    src={brand.bannerImage || "/placeholder.svg"}
-                    alt={`${brand.name} banner`}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <div className="text-center text-white px-4">
-                      <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Explore {brand.name} Collection</h3>
-                      <Button className="bg-white text-[#8B5A2B] hover:bg-white/90 w-full sm:w-auto">
-                      <a href="/products">
-                      View Catalog
-                      </a>
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </Button>
+                {/* Replace Banner Image with Brand Work Carousel */}
+                <div className="mt-12 sm:mt-16 animate-fade-in" style={{ animationDelay: "600ms" }}>
+                  <h3 className="text-2xl font-bold mb-6 text-center">{brand.name} Showcase</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Work Example 1 */}
+                    <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden group">
+                      <Image
+                        src={brand.showcase?.[0] || "/placeholder.svg"}
+                        alt={`${brand.name} work example 1`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div className="p-4 text-white">
+                          <h4 className="font-bold">{brand.name} Project</h4>
+                          <p className="text-sm">Interior design featuring premium {brand.name} plywood</p>
+                        </div>
+                      </div>
                     </div>
+                    
+                    {/* Work Example 2 */}
+                    <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden group">
+                      <Image
+                        src={brand.showcase?.[1] || "/placeholder.svg"}
+                        alt={`${brand.name} work example 2`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div className="p-4 text-white">
+                          <h4 className="font-bold">{brand.name} Installation</h4>
+                          <p className="text-sm">Completed project using {brand.name} products</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-center mt-8">
+                    <Button className="bg-[#8B5A2B] hover:bg-[#704626] w-auto">
+                      <a href="/products">
+                        View Full {brand.name} Collection
+                      </a>
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Button>
                   </div>
                 </div>
               </TabsContent>

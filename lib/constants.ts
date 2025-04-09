@@ -13,6 +13,14 @@ export const IMAGES = {
 
   // Brand logos
   brands: [
+    "https://i.ibb.co/BVhPzRJW/carpentier.png",
+    "https://i.ibb.co/sdgzk3Lv/muhurat.png",
+    "https://i.ibb.co/hFgM2Z1c/arkitekt.png",
+    "https://i.ibb.co/ksTx6qfK/protektor.png"
+  ],
+
+  // All partner brands for Products page
+  partnerBrands: [
     "https://www.centuryply.com/uploads/logo_6f13da0c06.png",
     "https://www.greenply.com/assets/images/logo.svg",
     "https://www.greenlam.co.in/skin/frontend/ves_blue/default/images/greenlam-logo.png",
@@ -28,10 +36,14 @@ export const IMAGES = {
       logo: "https://media-hosting.imagekit.io/1b839bd5197b45bf/arkitekt.png?Expires=1838359346&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wPrKcpZvP-yMrnbwKPtC283O6No0hBpOCdvKh7jWZl7LNOaLqt7qL8C7HVZGjZPr1yL262lLl~AKW0IqVl27zECz3Jc9qKd99sceRhv2Blt9zxR4VbLyMjMZN6XHPqAt~fpvchXmqKSJdxgVxBJLctWFCm6eSr-Jx57bQ9W2UPojVh4lni2Z70gKZvo5VlT1YNiLUNCogZ2d7lsBDAO2C95Yr6bqUIWVMjKg93w0XF1P-FeHHWHQ~qUZkVT3~zkJOF1mqYJB~WAOq2WZx0BwBtNSX31SsyOyH7pDtugo3ZtI2W~WST~tIQ~75UW1rA8673KRt90-CfndXQWnXk1GjA__",
       description: "Premium architectural plywood solutions for modern design concepts.",
       bannerImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070",
+      showcase: [
+        "https://i.ibb.co/0yTBGmJb/Arkitekt-Work.png",
+        "https://i.ibb.co/zh1ywWQ2/Arkitekt-Work1.png"
+      ],
       products: [
         {
           name: "Arkitekt Moisture Resistant Plywood",
-          image: "https://peptoply.com/wp-content/uploads/2022/06/b-scaled.jpg",
+          image: "https://i.ibb.co/spxMJKN1/Arkitekt-Plywood.jpg",
           description: "Luxury wood veneer panels with exceptional grain patterns.",
         },
         {
@@ -41,8 +53,13 @@ export const IMAGES = {
         },
         {
           name: "Arkitekt Boiling Water Proof Plywood",
-          image: "https://peptoply.com/wp-content/uploads/2022/06/a-scaled.jpg",
+          image: "https://www.plyduniya.com/cdn/shop/files/GreenGoldplywoodbwpmarinegradeis710plyduniya_ca8a954a-2fad-42a6-aa18-dd19c856c236.jpg?v=1687242875",
           description: "Load-bearing plywood solutions for structural applications.",
+        },
+        {
+          name: "Arkitekt Fire Retardant Plywood",
+          image: "https://plywood.royaletouche.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblogs_imgs_6.c5ef715d.jpg&w=3840&q=75",
+          description: "Specially treated plywood designed to resist fire and slow down the spread of flames.",
         },
       ],
     },
@@ -51,10 +68,14 @@ export const IMAGES = {
       logo: "https://media-hosting.imagekit.io/1ae65189b7064283/muhurat.png?Expires=1838359346&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=LP1~Krz8d~Ddf13b9RE1arEDJAD2MW6~fqMT9UoIH4z~flqfavgwztBmfkmH~Z26n3uyWVUc0Fg8pzgzg3SqchufkFm-E0ZO0Y8D9xXSVAQY~Lo~riU85p1dJ~1fxCasA6wkMPOkvSPVDlAmxWvxPrXet9Br537YZ3voeH72v0phaVqu-IG33E6wPJH5BRTD5AKYOXIXpUAC8fHgqoaGzKINO~GzI36~8ZA4FSD8hRB3qJKKDVZCjk57afhPEygFxGLCMMKYeVayJOg0B~wefnxVLhlx-ER~RcZuI8LNptKWN5oriv-s4fQxNwHubFCrYAHF52rcxUdMcKCUlBEN1g__",
       description: "Traditional and culturally inspired plywood designs for homes that reflect heritage.",
       bannerImage: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1974",
+      showcase: [
+        "https://i.ibb.co/qL0wvkGF/Muhurat-Work.png",
+        "https://i.ibb.co/mC4dwHT5/Kolors-Lam1.png"
+      ],
       products: [
         {
           name: "Muhurat Moisture Resistant Plywood",
-          image: "https://peptoply.com/wp-content/uploads/2022/06/b-scaled.jpg",
+          image: "https://i.ibb.co/cKk3P4JL/Muhurat-Plywood.jpg",
           description: "Decorative panels with traditional Indian motifs and patterns.",
         },
         {
@@ -64,20 +85,24 @@ export const IMAGES = {
         },
         {
           name: "Muhurat Boiling Water Proof Plywood",
-          image: "https://peptoply.com/wp-content/uploads/2022/06/a-scaled.jpg",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZrjJ89zP9eFMv8vZ6fsrY9mV0GtO8VFJaQ&s",
           description: "Special edition plywood designs celebrating Indian festivals and traditions.",
         },
       ],
     },
     {
       name: "Carpentier",
-      logo: "https://media-hosting.imagekit.io/353f4e1e2ad54d0a/carpentier.png?Expires=1838359346&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ePlf882p9pUMEpwgGtzBpmYcSrvr1wonyERl9YMbruNu7uzIFg3wwGSP83Fd16Y2i19usZ1qqLFTb02rZarv7tY9lf3vZYUcqI~BlkV3yJth18u~z9omMpB~nsAgjFIwRJMsyVx7Scob-ouwSXZIGQccQyI0xj8bGLyt~jXWVfR-Y3ORZAia03RxLuGOBhHGgMqlgA~-BcD5whJGtQ~6vgztpM~zNuvBGriL-V37gy1Tleu5FiujfbjFnf~GYsH7g~vsZ72HF1RQJ4thyfdjrT~jhyw5CCoe2DXnh8Oc7x6NoQtRPTLRndMW52xC7HnkKq2ScyS0BZUPo85zI2FS5Q__",
+      logo: "https://i.ibb.co/BVhPzRJW/carpentier.png",
       description: "European-inspired craftsmanship with precision engineering for luxury interiors.",
       bannerImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158",
+      showcase: [
+        "https://i.ibb.co/NdPTqj0G/Kolors-Lam.png",
+        "https://i.ibb.co/TMc6kwsk/Kolors-Lam2.png"
+      ],
       products: [
         {
           name: "Carpentier Moisture Resistant Plywood",
-          image: "https://peptoply.com/wp-content/uploads/2022/06/b-scaled.jpg",
+          image: "https://i.ibb.co/h1X9BhmJ/Carpentier-Plywood.jpg",
           description: "Premium grade plywood with flawless finishes for high-end furniture.",
         },
         {
@@ -160,7 +185,7 @@ export const IMAGES = {
 
   // Product images
   products: {
-    marinePlywood: "https://www.centuryply.com/uploads/Club_Prime_Plywood_72_mm_120923_f1c037ed51.jpg",
+    marinePlywood: "https://i.ibb.co/Y7M7PqrL/Protektor-Plywood.jpg",
     veneerPlywood: "https://images.jdmagicbox.com/quickquotes/images_main/teak-veneer-plywood-375419440-9ca2r.jpg",
     mdfBoard: "https://cpimg.tistatic.com/05682320/b/4/Laminated-MDF-Board-Sonoma-Oak-Dark.jpeg",
     blockboard: "https://materialdepot-images-hbh2cjbvbtfmanhx.z02.azurefd.net/V000255/ecotec-platinum-710-blockboard-greenply-plywood/ecotec-platinum-710-blockboard-19-ivory-customizedxcustomized/1.jpg?width=400",
@@ -168,8 +193,9 @@ export const IMAGES = {
     flexiblePlywood: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSffKNyWz-YcR9eL0VAg_qoF0rPHCBYPrEZLA&s",
     fireResistantPlywood: "https://images.thdstatic.com/productImages/8e4b0161-fbee-444c-ba4a-4644b1998568/svn/sheathing-plywood-309961-64_1000.jpg",
     shutteringPlywood: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfkozl8NjUWKGrlb1zmPLMiQILNGwsXwFpQg&s",
-    bambooPly: "https://tiimg.tistatic.com/fp/1/007/632/sustainable-and-eco-friendly-brown-bamboo-plywood-sheet-for-flooring-cabinets-furniture-and-architectural-details-806.jpg",
-    acrylicPly: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-YXysezl4e0ZGBCDfWuw_3Vg1cZK9v96bcQ&s",
+    hdhmrBoard: "https://images.jdmagicbox.com/quickquotes/images_main/action-tesa-hdhmr-plywood-board-thickness-18-mm-2221637214-we7y1nt5.jpg",
+    abrazeBoard: "https://5.imimg.com/data5/SELLER/Default/2023/10/353280996/VX/AU/KT/85994731/3-250x250.jpg",
+    embossedHdfBoard: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg-oanBOF-7riZLPBawVY1AwbuNzWxOU2IBA&s",
   },
 
   // About page images
@@ -179,6 +205,32 @@ export const IMAGES = {
       "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
       "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
+    milestones: [
+      {
+        year: "1995",
+        title: "Foundation",
+        image: "https://images.pexels.com/photos/2768396/pexels-photo-2768396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        description: "Manish Plyam Studio was established with a small workshop in the heart of the city."
+      },
+      {
+        year: "2003",
+        title: "Expansion",
+        image: "https://images.pexels.com/photos/128362/pexels-photo-128362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        description: "Expanded operations with a new manufacturing facility and increased production capacity."
+      },
+      {
+        year: "2010",
+        title: "ISO Certification",
+        image: "https://images.pexels.com/photos/12324202/pexels-photo-12324202.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        description: "Received ISO 9001:2008 certification for our quality management systems."
+      },
+      {
+        year: "2022",
+        title: "Sustainable Practices",
+        image: "https://images.pexels.com/photos/31528043/pexels-photo-31528043/free-photo-of-african-tea-farmers-harvesting-in-lush-fields.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        description: "Implemented eco-friendly manufacturing processes and received Green Business certification."
+      }
+    ]
   },
 
   // Contact page with multiple branches

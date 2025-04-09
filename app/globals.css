@@ -63,13 +63,14 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-33.33%); /* Move by 1/3 of the total width (one set of brands) */
+    transform: translateX(-100%);
   }
 }
 
 .brand-slider {
-  animation: slide linear infinite;
+  animation: slide 30s linear infinite;
   will-change: transform;
+  display: flex;
 }
 
 /* Hero heading animations */

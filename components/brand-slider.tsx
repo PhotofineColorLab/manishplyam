@@ -17,11 +17,14 @@ export function BrandSlider({ brands, speed = 10 }: BrandSliderProps) {
     if (!container) return
 
     // Set the animation duration based on the number of brands and desired speed
-    container.style.animationDuration = `${speed}s`
+    // For fewer brands, use a slower speed to make it less obvious
+    const adjustedSpeed = brands.length <= 3 ? speed * 1.5 : speed
+    container.style.animationDuration = `${adjustedSpeed}s`
   }, [brands, speed])
 
-  // Triple the brands to ensure a seamless loop
-  const tripleArray = [...brands, ...brands, ...brands]
+  // For fewer brands, create more repetition to make the slider appear fuller
+  const repeatCount = brands.length <= 3 ? 5 : 3
+  const repeatedArray = Array(repeatCount).fill(brands).flat()
 
   return (
     <div className="w-full overflow-hidden">
@@ -29,11 +32,19 @@ export function BrandSlider({ brands, speed = 10 }: BrandSliderProps) {
         ref={containerRef}
         className="flex items-center brand-slider"
         style={{
-          width: `${brands.length * 3 * 200}px`, // Each brand takes approximately 200px of space
+          width: `${brands.length * repeatCount * 200}px`, // Each brand takes approximately 200px of space
         }}
       >
-        {tripleArray.map((brand, index) => (
-          <div key={index} className="flex-shrink-0 mx-8 w-[180px]">
+        {repeatedArray.map((brand, index) => (
+          <div 
+            key={index} 
+            className="flex-shrink-0 mx-8 w-[180px]"
+            style={{
+              // Add variable spacing between logos when there are fewer brands
+              marginLeft: brands.length <= 3 ? '48px' : '32px',
+              marginRight: brands.length <= 3 ? '48px' : '32px',
+            }}
+          >
             <Image
               src={brand || "/placeholder.svg"}
               width={180}

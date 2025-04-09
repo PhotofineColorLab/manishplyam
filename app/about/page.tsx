@@ -106,10 +106,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Milestones Achieved - Moved below Leadership */}
+      {/* Milestones Carousel */}
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl animate-slide-in-left">
                 Milestones Achieved
@@ -119,47 +119,31 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="mx-auto max-w-3xl space-y-8 py-10">
-            {[
-              {
-                year: "1995",
-                title: "Foundation",
-                description: "Manish Plyam Studio was established with a small workshop in the heart of the city.",
-              },
-              {
-                year: "2003",
-                title: "Expansion",
-                description: "Expanded operations with a new manufacturing facility and increased production capacity.",
-              },
-              {
-                year: "2010",
-                title: "ISO Certification",
-                description: "Received ISO 9001:2008 certification for our quality management systems.",
-              },
-              {
-                year: "2015",
-                title: "20 Years of Excellence",
-                description: "Celebrated 20 years of service with the launch of our premium product line.",
-              },
-              {
-                year: "2018",
-                title: "National Recognition",
-                description: "Awarded 'Best Plywood Manufacturer' at the National Furniture & Interior Design Awards.",
-              },
-              {
-                year: "2022",
-                title: "Sustainable Practices",
-                description:
-                  "Implemented eco-friendly manufacturing processes and received Green Business certification.",
-              },
-            ].map((milestone, i) => (
-              <div key={i} className="flex flex-col md:flex-row gap-4">
-                <div className="flex-shrink-0 w-24 h-24 rounded-full bg-[#8B5A2B] text-white flex items-center justify-center">
-                  <span className="text-xl font-bold">{milestone.year}</span>
-                </div>
-                <div className="flex-1 space-y-2">
-                  <h3 className="text-xl font-bold">{milestone.title}</h3>
-                  <p className="text-muted-foreground">{milestone.description}</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {IMAGES.about.milestones.map((milestone, index) => (
+              <div 
+                key={index} 
+                className="relative group overflow-hidden rounded-xl transition-all duration-500 hover:shadow-xl"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <div className="aspect-[4/5] relative overflow-hidden">
+                  <Image
+                    src={milestone.image}
+                    alt={milestone.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-80 transition-opacity duration-300"></div>
+                  
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="flex items-center mb-2">
+                      <span className="text-2xl font-bold mr-2">{milestone.year}</span>
+                      <div className="h-px flex-grow bg-white/30"></div>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2">{milestone.title}</h3>
+                    <p className="text-sm text-white/80">{milestone.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
